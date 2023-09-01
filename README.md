@@ -1,6 +1,6 @@
 # Elysium Files
 
-This is a program for sending personalized emails to a list of investors. It uses the GPT-3 model to generate email content based on investor information.
+This is a powerful and versatile program designed to automate the process of sending personalized emails to a list of investors. By leveraging the cutting-edge GPT-3 model, the program generates highly engaging and customized email content based on the specific information of each investor.
 
 ## Setup
 
