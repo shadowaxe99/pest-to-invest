@@ -1,6 +1,7 @@
 # Elysium Files: A Legendary Adventure in Investor Communication
 
-![Elysium Files](https://example.com/elysium_files_logo.png)
+
+![Unknown](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/fdb0bf7c-843f-427b-8124-719410919f6d)
 
 As you embark on your epic quest, Fundraizema, a legendary adventurer in the realm of investor communication, in the world of Elysium Files, imagine yourself as a humble adventurer starting out in the quaint village of Lumbridge. Just like a seasoned adventurer, in RuneScape, you're eager to learn and explore the vast realm of investor communication. Let's dive into the steps, Fundraizema, and conquer the realm of investor communication! to get started:
 
@@ -11,7 +12,9 @@ This is a powerful and versatile program designed to automate the process of sen
 
 Clone the Repository: Begin your quest by cloning the Elysium Files repository. Use the command `git clone <repository_url>` to create a local copy of the codebase. Feel the excitement as you witness the files materialize before your eyes.
 
-Install Dependencies: Equip yourself with the necessary tools by installing the required dependencies. Use the command `pip install -r requirements.txt` to gather the essential components for your journey. Watch as the magical artifacts of the Python ecosystem come together.
+Install Dependencies: Equip yourself with the necessary tools by installing the required dependencies. Use the command `pip install -r requirements.txt` to gather the essential![Unknown](https://github.com/![Wise_Old_Man_tasks](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/d74fe2c8-4d8a-4335-b8c5-9ed8abde67ad)
+shadowaxe99/pest-to-invest/assets/128367359/e6a2ee40-d6b3-4525-ac01-440ff62d57f6)
+ components for your journey. Watch as the magical artifacts of the Python ecosystem come together.
 
 Prepare for Adventure: Just as Lumbridge prepares you for your RuneScape adventures, Elysium Files requires a few setup steps. Obtain your OpenAI API key and follow the instructions in the OpenAI documentation to unleash the power of the GPT-3 model. Remember, with great power comes great responsibility.
 
@@ -70,3 +73,4 @@ Your feedback is as valuable as the rarest of RuneScape drops. Share your though
 
 
 Make sure to secure your sensitive information, such as your OpenAI API key and email credentials. Do not commit these to version control.
+![Wise_Old_Man_tasks](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/77bacad6-d18c-4e22-8e31-10827ea3f8e3)
