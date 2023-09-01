@@ -11,11 +11,12 @@ from email_manager import EmailManager
 from templates import Templates
 from user_prompt import UserPrompt
 
-
+openai.api_key = "sk-xxx" # add you api key here
 def format_prompt(investor):
-    prompt = UserPrompt.get_prompt()
-    prompt = prompt.replace('[NAME]', investor['name'])
-    prompt = prompt.replace('[COMPANY NAME]', investor['company_name'])
+    user_prompt = UserPrompt()
+    prompt = user_prompt.get_prompt()
+    prompt = prompt.replace('[NAME]', investor["Name"])
+    prompt = prompt.replace('[COMPANY NAME]', investor['Company Name'])
     return prompt
 
 
@@ -43,9 +44,9 @@ def main():
     investors = read_investors_from_csv(args.file)
 
     email_manager = EmailManager()
-
+    print("investors", investors)
     for investor in investors:
-        print(f'Running - {investor['name']}')
+        print(f'Running - {investor["Name"]}')
         prompt = format_prompt(investor)
 
         try:
@@ -55,41 +56,54 @@ def main():
                 temperature=args.temperature,
                 max_tokens=args.max_tokens,
                 n=1,
-                stop=None,
-                log_level='info',
-                logprobs=None,
-                echo=False,
-                logit_bias=None,
-                return_prompt=False,
-                return_sequences=True,
-                return_full_text=True
+                # stop=None,
+                # log_level='info',
+                # logprobs=None,
+                # echo=False,
+                # return_prompt=False,
+                # return_sequences=True,
+                # return_full_text=True
             )
         except Exception as e:
             logging.error(f'Error occurred: {str(e)}')
             continue
 
         result = result.choices[0].text.strip()
-        result = result.replace('[NAME]', investor['name'])
-        result = result.replace('[COMPANY NAME]', investor['company_name'])
-
-        body = Templates.EMAIL_BODY.format(result=result)
+        result = result.replace('[NAME]', investor['Name'])
+        result = result.replace('[COMPANY NAME]', investor['Company Name'])
+        templates = Templates()
+        body = templates.format_email_body(raw_body=result)
         signature = UserPrompt.get_signature()
         body += '\n\n' + signature
 
         if args.test:
-            print(f'Test Result for {investor['name']}:\n{body}')
+            print(f'Test Result for {investor["Name"]}:\n{body}')
         else:
             email_manager.send_email([investor['email']], [], [], Templates.EMAIL_SUBJECT, body)
 
-        follow_up_subject = Templates.FOLLOW_UP_SUBJECT
-        follow_up_body = Templates.FOLLOW_UP_BODY
-        follow_up_body = follow_up_body.replace('[NAME]', investor['name'])
+        follow_up_subject = templates.format_follow_up_subject("Following up")
+        follow_up_body = templates.get_template()
+        follow_up_body = follow_up_body.replace('[NAME]', investor['Name'])
         follow_up_body += '\n\n' + signature
 
         if args.test:
-            print(f'Test Result for Follow-up Email to {investor['name']}:\n{follow_up_body}')
+            print(f'Test Result for Follow-up Email to {investor["Name"]}:\n{follow_up_body}')
         else:
-            email_manager.send_email([investor['email']], [], [], follow_up_subject, follow_up_body)
+            import datetime
+            email_manager = EmailManager()
+            email_manager.send_email(
+                subject=follow_up_subject, 
+                to=[investor['email']], 
+                attachments=[],
+                date=datetime.datetime.now(),
+                cc=[],
+                msg={
+                    'To': [investor['Email']],
+                    'From':[],
+                    'Cc': [],
+                    'Subject': follow_up_subject
+                },
+                body=follow_up_body)
 
 
 if __name__ == '__main__':
