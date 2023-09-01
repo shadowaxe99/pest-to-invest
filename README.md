@@ -50,7 +50,7 @@ Share Your Feedback: As you continue your journey with Elysium Files, share your
 
 
 To run the program, use the following command:
-
+![Screen+Shot+2020-10-28+at+8 07 07+PM](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/397d4189-5589-43c4-a982-a8de5ff184eb)
 ```shell
 python3 main.py --file <csv_file> --temperature <temperature> --max_tokens <max_tokens> --mode <mode> --reply_speed <reply_speed> --custom_prompt <custom_prompt> --test
 ```
@@ -62,11 +62,12 @@ python3 main.py --file <csv_file> --temperature <temperature> --max_tokens <max_
 - `<reply_speed>`: The reply speed for the GPT-3 model
 - `<custom_prompt>`: The custom prompt for the GPT-3 model
 - `--test`: Run in test mode to see the generated email content without sending
+![WhyYouShouldInvestInEmail_Image1](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/82501f3d-50f4-4b95-aa42-4bbd43b3f3de)
 
 ## Security Considerations: Protect Your Digital Kingdom
 
 Security Considerations: Protect your valuable treasures and secrets. While Elysium Files takes security seriously, it is your responsibility to safeguard sensitive information such as your OpenAI API key and email credentials. Be vigilant and follow best practices to keep your digital kingdom secure.
-
+![Michael-Seibel-Investor-Email-Tweet](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/13385609-2217-42c3-99ea-a193e4df4642)
 Feedback
 
 Your feedback is as valuable as the rarest of RuneScape drops. Share your thoughts, suggestions, and tales of triumph with us. Together, we can shape the future of Elysium Files and continue our quest to revolutionize investor communication in the spirit of RuneScape.
@@ -74,3 +75,4 @@ Your feedback is as valuable as the rarest of RuneScape drops. Share your though
 
 Make sure to secure your sensitive information, such as your OpenAI API key and email credentials. Do not commit these to version control.
 ![Wise_Old_Man_tasks](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/77bacad6-d18c-4e22-8e31-10827ea3f8e3)
+
