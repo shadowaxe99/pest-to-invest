@@ -7,14 +7,10 @@ import os
 
 
 class EmailManager:
-    def __init__(self):
-        self.smtp_server = 'smtp.gmail.com'
         self.smtp_port = 587
         self.sender_email = 'your_email@example.com'
         self.sender_password = 'your_password'
 
-    def send_email(self, to, cc, bcc, subject, body, attachments=None, date=None):
-        msg = MIMEMultipart()
         msg['From'] = self.sender_email
         msg['To'] = ', '.join(to)
         msg['Cc'] = ', '.join(cc)
@@ -28,7 +24,6 @@ class EmailManager:
         if attachments:
             for attachment in attachments:
                 with open(attachment, 'rb') as file:
-                    part = MIMEBase('application', 'octet-stream')
                     part.set_payload(file.read())
                     encoders.encode_base64(part)
                     part.add_header('Content-Disposition', f'attachment; filename={os.path.basename(attachment)}')

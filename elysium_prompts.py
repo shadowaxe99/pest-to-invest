@@ -1,4 +1,3 @@
-elysium_prompts = [
     {
         'prompt': 'As an investor, I want to receive personalized emails that address my specific interests and investment history.',
         'investor_type': 'Personalized Emails',
