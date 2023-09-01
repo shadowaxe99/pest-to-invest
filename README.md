@@ -77,5 +77,6 @@ Your feedback is as valuable as the rarest of RuneScape drops. Share your though
 
 
 Make sure to secure your sensitive information, such as your OpenAI API key and email credentials. Do not commit these to version control.
+
 ![Wise_Old_Man_tasks](https://github.com/shadowaxe99/pest-to-invest/assets/128367359/77bacad6-d18c-4e22-8e31-10827ea3f8e3)
 
